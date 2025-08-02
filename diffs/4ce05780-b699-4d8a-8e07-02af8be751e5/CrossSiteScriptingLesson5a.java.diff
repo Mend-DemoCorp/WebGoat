@@ -66,8 +66,7 @@
 -    cart.append("<p>We have charged credit card:" + field1 + "<br />");
 +    cart.append("<p>We have charged credit card:" + StringEscapeUtils.escapeHtml4(field1) + "<br />");
      cart.append("                             ------------------- <br />");
--    cart.append("                               $" + totalSale);
-+    cart.append("                               $" + StringEscapeUtils.escapeHtml4(totalSale));
+     cart.append("                               $" + totalSale);
  
      // init state
      if (userSessionData.getValue("xss-reflected1-complete") == null) {
